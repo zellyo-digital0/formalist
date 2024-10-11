@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formalist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/aos.css" />
+  <link rel="stylesheet" href="./css/output.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dataTables.tailwindcss.css" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+
+</head>
+
+<body>
+  <header class="h-[52px]" id="header">
+    <div class="fixed w-full top-0 left-0 z-50 bg-white">
+      <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 container max-w-[1360px] mx-auto px-6">
+        <div class=" flex flex-wrap items-center justify-between mx-auto lg:py-0 py-3">
+          <a href="/" class="flex items-center rtl:space-x-reverse gap-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 0 38.178 61.943">
+              <g id="Groupe_54519" data-name="Groupe 54519" transform="translate(-611.123 -261.721)">
+                <path id="Tracé_1" data-name="Tracé 1"
+                  d="M616.353,261.726l32.444,4.139a.578.578,0,0,1,.5.573v11.015a.577.577,0,0,1-.3.508l-5.392,2.921a.578.578,0,0,1-.853-.508v-9.716a.577.577,0,0,0-.494-.571l-30.641-4.469a.578.578,0,0,1-.214-1.067l4.578-2.747A.577.577,0,0,1,616.353,261.726Z" />
+                <path id="Tracé_2" data-name="Tracé 2"
+                  d="M722.3,443.36a.577.577,0,0,1-.494-.571V432.332a.577.577,0,0,1,.636-.574l5.761.593a.577.577,0,0,1,.518.574v6.01a.577.577,0,0,0,.5.573l17.148,2.188a.577.577,0,0,1,.5.573v11.015a.577.577,0,0,1-.3.508l-5.393,2.921a.577.577,0,0,1-.852-.508v-9.717a.577.577,0,0,0-.494-.571L728.716,444.3Z"
+                  transform="translate(-99.657 -153.102)" />
+                <path id="Tracé_3" data-name="Tracé 3"
+                  d="M722.016,673.967v10.216a.578.578,0,0,0,.853.508l5.392-2.921a.578.578,0,0,0,.3-.508V663.833a.578.578,0,0,0-.525-.575l-5.527-.5a.578.578,0,0,0-.63.582Z"
+                  transform="translate(-99.729 -361.097)" />
+              </g>
+            </svg>
+            <span class="text-xl font-semibold text-[#25221e]">Formalist</span>
+          </a>
+          <button data-collapse-toggle="navbar-dropdown" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown" aria-expanded="false" id="navButton">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5 humbar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"
+              class="hidden cross w-5 h-5">
+              <path fill-rule="evenodd"
+                d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 0 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 0 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 1 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
+            <div class="flex flex-wrap gap-x-2 lg:flex-row flex-col">
+              <ul class="flex flex-col lg:flex-row">
+                <li class="group relative lg:py-2 lg:my-1">
+                  <a href="services.html" id="dropdownNavbarLink"
+                    class="flex items-center justify-between w-full md:w-auto text-[#25221e] text-base font-medium py-3 px-[18px] mx-1 rounded-lg group-hover:bg-[#f5f5f5] transition-all">Services
+                    <svg class="w-2.5 h-2.5 ms-2.5 lg:block hidden" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg></a>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownNavbar"
+                    class="z-10 lg:group-hover:block hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow md:w-96 w-full !mx-1 lg:!mt-0 !mt-4 absolute top-16 left-0 transition-all">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400 px-2">
+                      <li>
+                        <a href="#" class="flex w-full gap-x-3 px-4 py-2 hover:bg-[#f5f5f5] rounded-lg ">
+                          <div class="mt-1">
+                            <svg width="18" height="18" viewBox="0 0 16 17" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" color="var(--display-onlight-tertiary)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.25 4c0-.966.784-1.75 1.75-1.75h7c.966 0 1.75.784 1.75 1.75v2.001a2.5 2.5 0 1 1 0 4V12A1.75 1.75 0 0 1 10 13.75H3A1.75 1.75 0 0 1 1.25 12V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.996.444c-.71 0-1.285-.576-1.285-1.285V4ZM3 3.75a.25.25 0 0 0-.25.25v2.001a2.5 2.5 0 1 1 0 4V12c0 .138.112.25.25.25h7a.25.25 0 0 0 .25-.25V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.995.444c-.71 0-1.286-.576-1.286-1.285V4a.25.25 0 0 0-.25-.25H3Z"
+                                fill="currentColor"></path>
+                            </svg>
+                          </div>
+                          <div class="">
+                            <span class="block text-[#25221e] font-medium mb-1">Création de Société</span>
+                            <span class="text-[#25221ea8] font-normal">Lancez votre entreprise sereinement.</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex w-full gap-x-3 px-4 py-2 hover:bg-[#f5f5f5] rounded-lg ">
+                          <div class="mt-1">
+                            <svg width="18" height="18" viewBox="0 0 16 17" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" color="var(--display-onlight-tertiary)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.25 4c0-.966.784-1.75 1.75-1.75h7c.966 0 1.75.784 1.75 1.75v2.001a2.5 2.5 0 1 1 0 4V12A1.75 1.75 0 0 1 10 13.75H3A1.75 1.75 0 0 1 1.25 12V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.996.444c-.71 0-1.285-.576-1.285-1.285V4ZM3 3.75a.25.25 0 0 0-.25.25v2.001a2.5 2.5 0 1 1 0 4V12c0 .138.112.25.25.25h7a.25.25 0 0 0 .25-.25V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.995.444c-.71 0-1.286-.576-1.286-1.285V4a.25.25 0 0 0-.25-.25H3Z"
+                                fill="currentColor"></path>
+                            </svg>
+                          </div>
+                          <div class="">
+                            <span class="block text-[#25221e] font-medium mb-1">Modification de Société</span>
+                            <span class="text-[#25221ea8] font-normal">Ajustez votre structure légalement.</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex w-full gap-x-3 px-4 py-2 hover:bg-[#f5f5f5] rounded-lg ">
+                          <div class="mt-1">
+                            <svg width="18" height="18" viewBox="0 0 16 17" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" color="var(--display-onlight-tertiary)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.25 4c0-.966.784-1.75 1.75-1.75h7c.966 0 1.75.784 1.75 1.75v2.001a2.5 2.5 0 1 1 0 4V12A1.75 1.75 0 0 1 10 13.75H3A1.75 1.75 0 0 1 1.25 12V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.996.444c-.71 0-1.285-.576-1.285-1.285V4ZM3 3.75a.25.25 0 0 0-.25.25v2.001a2.5 2.5 0 1 1 0 4V12c0 .138.112.25.25.25h7a.25.25 0 0 0 .25-.25V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.995.444c-.71 0-1.286-.576-1.286-1.285V4a.25.25 0 0 0-.25-.25H3Z"
+                                fill="currentColor"></path>
+                            </svg>
+                          </div>
+                          <div class="">
+                            <span class="block text-[#25221e] font-medium mb-1">Fermeture de Société</span>
+                            <span class="text-[#25221ea8] font-normal">Terminez vos activités proprement.</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex w-full gap-x-3 px-4 py-2 hover:bg-[#f5f5f5] rounded-lg ">
+                          <div class="mt-1">
+                            <svg width="18" height="18" viewBox="0 0 16 17" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" color="var(--display-onlight-tertiary)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.25 4c0-.966.784-1.75 1.75-1.75h7c.966 0 1.75.784 1.75 1.75v2.001a2.5 2.5 0 1 1 0 4V12A1.75 1.75 0 0 1 10 13.75H3A1.75 1.75 0 0 1 1.25 12V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.996.444c-.71 0-1.285-.576-1.285-1.285V4ZM3 3.75a.25.25 0 0 0-.25.25v2.001a2.5 2.5 0 1 1 0 4V12c0 .138.112.25.25.25h7a.25.25 0 0 0 .25-.25V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.995.444c-.71 0-1.286-.576-1.286-1.285V4a.25.25 0 0 0-.25-.25H3Z"
+                                fill="currentColor"></path>
+                            </svg>
+                          </div>
+                          <div class="">
+                            <span class="block text-[#25221e] font-medium mb-1">Services Juridiques Personnalisés</span>
+                            <span class="text-[#25221ea8] font-normal">Solutions légales sur mesure.</span>
+                          </div>
+                        </a>
+                      </li>
+
+
+                      <li>
+                        <a href="#" class="flex w-full gap-x-3 px-4 py-2 hover:bg-[#f5f5f5] rounded-lg ">
+                          <div class="mt-1">
+                            <svg width="18" height="18" viewBox="0 0 16 17" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" color="var(--display-onlight-tertiary)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.25 4c0-.966.784-1.75 1.75-1.75h7c.966 0 1.75.784 1.75 1.75v2.001a2.5 2.5 0 1 1 0 4V12A1.75 1.75 0 0 1 10 13.75H3A1.75 1.75 0 0 1 1.25 12V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.996.444c-.71 0-1.285-.576-1.285-1.285V4ZM3 3.75a.25.25 0 0 0-.25.25v2.001a2.5 2.5 0 1 1 0 4V12c0 .138.112.25.25.25h7a.25.25 0 0 0 .25-.25V9.534c0-.71.575-1.284 1.284-1.284.437 0 .78.22.996.445a1 1 0 1 0 .001-1.389 1.395 1.395 0 0 1-.995.444c-.71 0-1.286-.576-1.286-1.285V4a.25.25 0 0 0-.25-.25H3Z"
+                                fill="currentColor"></path>
+                            </svg>
+                          </div>
+                          <div class="">
+                            <span class="block text-[#25221e] font-medium mb-1">Gestion des Assemblées Générales</span>
+                            <span class="text-[#25221ea8] font-normal">Réunions statutaires efficaces.</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </li>
+                <li class=" lg:py-3">
+                  <a href="blog.html"
+                    class="block text-[#25221e] text-base font-medium py-3 px-[18px] lg:mx-1 rounded-lg hover:bg-[#f5f5f5] transition-all">Ressources</a>
+                </li>
+                <li class="lg:py-3">
+                  <a href="pricing.html"
+                    class="block text-[#25221e] text-base font-medium py-3 px-[18px] lg:mx-1 rounded-lg hover:bg-[#f5f5f5] transition-all">Tarifs</a>
+                </li>
+                <li class="lg:py-3">
+                  <a href="faq.html"
+                    class="block text-[#25221e] text-base font-medium py-3 px-[18px] lg:mx-1 rounded-lg hover:bg-[#f5f5f5] transition-all">FAQ</a>
+                </li>
+              </ul>
+
+              <ul
+                class="flex flex-row lg:gap-0 gap-x-2 relative before:bg-[#25221e2e] before:absolute before:-left-1 lg:before:top-1/2 before:top-0 lg:before:-translate-y-1/2 lg:before:h-6 before:h-[1px] lg:before:w-[1px] before:w-full lg:pt-0 pt-4 lg:mt-0 mt-3">
+                <li class="lg:w-auto w-full lg:text-start text-center lg:py-3">
+                  <a href="#"
+                    class="block text-[#25221e] text-base font-medium py-3 px-[18px] lg:mx-1 rounded-lg hover:bg-[#f5f5f5] transition-all lg:bg-transparent bg-[#ffefe6]">Connexion</a>
+                </li>
+                <li class="lg:w-auto w-full lg:text-start text-center lg:py-3">
+                  <a href="#"
+                    class="block text-white  text-base font-medium py-3 px-[18px] mx-1 rounded-lg hover:bg-[#cf331f] transition-all bg-[#e0483a]">S'inscrire</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="py-[60px]">
+    <div class="container max-w-[1136px] mx-auto px-6">
+      <div class="grid lg:grid-cols-9 grid-cols-1 gap-x-14">
+        <!-- Sidebar -->
+        <div class="lg:col-span-2 col-span-1 lg:border-r border-gray-200 lg:sticky lg:top-24 left-0 lg:h-[85vh]">
+          <ul class=" flex lg:flex-col flex-row gap-x-5 gap-y-2 flex-wrap lg:mb-0 mb-7">
+            <li><a href="#" class="text-[15px] text-[#121212] font-semibold hover:text-[#cf331f]">Derniers articles</a>
+            </li>
+            <li><a href="#" class="text-[15px] text-[#00000099] hover:text-[#cf331f]">Blog</a></li>
+            <li><a href="#" class="text-[15px] text-[#00000099] hover:text-[#cf331f]">Actualités juridiques</a></li>
+            <li><a href="#" class="text-[15px] text-[#00000099] hover:text-[#cf331f]">Gestion et Administration</a></li>
+            <li><a href="#" class="text-[15px] text-[#00000099] hover:text-[#cf331f]">Fiscalité et Comptabilité</a></li>
+            <li><a href="#" class="text-[15px] text-[#00000099] hover:text-[#cf331f]">Innovation et Technologie</a></li>
+            <li><a href="#" class="text-[15px] text-[#00000099] hover:text-[#cf331f]">Stratégie et Développement</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-7 col-span-1">
+          <div class="grid md:grid-cols-2 grid-cols-1 gap-y-10 gap-x-14">
+
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <a href="blogDetails.html" class="">
+              <img src="https://via.placeholder.com/400x200" alt="Article Image"
+                class="w-full h-48 object-cover mb-4 rounded-lg border border-[#00000014] hover:bg-[#00000008]">
+              <h3 class="text-xs mb-1  text-[#0009]">Notion HQ</h3>
+              <h2 class="lg:text-2xl text-xl font-semibold mb-2 hover:text-[#cf331f] text-[#121212]">Our attention is
+                broken. Maybe
+                AI can fix it.</h2>
+              <p class="text-[#0009]">There’s a war on for our attention, and we’re losing. Can AI's long-term memory
+                help?
+              </p>
+              <div class="flex items-center mt-4">
+                <img src="https://via.placeholder.com/40" alt="Author Image" class="w-10 h-10 rounded-full mr-4">
+                <div>
+                  <p class="text-[#050505] text-[15px]">Michael Krantz</p>
+                  <p class="text-[#0006] text-xs">Marketing, Notion</p>
+                </div>
+              </div>
+            </a>
+            <!-- single item end  -->
+
+
+          </div>
+          <nav aria-label="Page navigation example" class="mt-16">
+            <ul class="flex items-center justify-center -space-x-px h-10 text-base">
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white rounded-lg hover:bg-gray-100 hover:text-gray-700 ">
+                  <span class="sr-only">Previous</span>
+                  <svg class="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 1 1 5l4 4" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 rounded-lg ">1</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 rounded-lg ">2</a>
+              </li>
+              <li>
+                <a href="#" aria-current="page"
+                  class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 rounded-lg ">3</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 rounded-lg ">4</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 rounded-lg ">5</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white  rounded-lg hover:bg-gray-100 hover:text-gray-700 ">
+                  <span class="sr-only">Next</span>
+                  <svg class="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 9 4-4-4-4" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <hr class="mt-1 border-[#C3C3C3]" />
+  <!-- faq end  -->
+  <footer class="bg-white">
+    <div class="container max-w-[1360px] mx-auto px-6 py-10 lg:pt-16 ">
+      <div class="grid lg:grid-cols-8 grid-cols-1">
+        <div class=" lg:col-span-3 mb-10 xl:mb-0 flex flex-row lg:flex-col gap-5 lg:gap-0 ">
+          <a href="#" class="flex items-center rtl:space-x-reverse gap-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 0 38.178 61.943">
+              <g id="Groupe_54519" data-name="Groupe 54519" transform="translate(-611.123 -261.721)">
+                <path id="Tracé_1" data-name="Tracé 1"
+                  d="M616.353,261.726l32.444,4.139a.578.578,0,0,1,.5.573v11.015a.577.577,0,0,1-.3.508l-5.392,2.921a.578.578,0,0,1-.853-.508v-9.716a.577.577,0,0,0-.494-.571l-30.641-4.469a.578.578,0,0,1-.214-1.067l4.578-2.747A.577.577,0,0,1,616.353,261.726Z">
+                </path>
+                <path id="Tracé_2" data-name="Tracé 2"
+                  d="M722.3,443.36a.577.577,0,0,1-.494-.571V432.332a.577.577,0,0,1,.636-.574l5.761.593a.577.577,0,0,1,.518.574v6.01a.577.577,0,0,0,.5.573l17.148,2.188a.577.577,0,0,1,.5.573v11.015a.577.577,0,0,1-.3.508l-5.393,2.921a.577.577,0,0,1-.852-.508v-9.717a.577.577,0,0,0-.494-.571L728.716,444.3Z"
+                  transform="translate(-99.657 -153.102)"></path>
+                <path id="Tracé_3" data-name="Tracé 3"
+                  d="M722.016,673.967v10.216a.578.578,0,0,0,.853.508l5.392-2.921a.578.578,0,0,0,.3-.508V663.833a.578.578,0,0,0-.525-.575l-5.527-.5a.578.578,0,0,0-.63.582Z"
+                  transform="translate(-99.729 -361.097)"></path>
+              </g>
+            </svg>
+            <span class="hidden lg:block text-xl font-semibold text-[#25221e]">Formalist</span>
+          </a>
+          <p class="lg:mt-4 lg:max-w-[350px]">
+            Votre partenaire de confiance pour des formalités juridiques simplifiées, sécurisées et validées par des
+            avocats
+            expérimentés.
+          </p>
+        </div>
+        <div class=" lg:col-span-5 lg:grid lg:grid-cols-9 lg:gap-10 xl:text-left">
+          <div class="col-span-3">
+            <h2 class="mb-6 px-3 text-base font-semibold text-[#25221e]">
+              Formalités
+            </h2>
+            <ul class="text-gray-500 font-normal">
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Services
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Ressources
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>
+                    Tarifs
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Conditions
+                    d’utilisation et confidentialité
+
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+
+
+
+
+            </ul>
+          </div>
+          <hr class="block lg:hidden my-8 h-[2px] bg-[#C3C3C3]" />
+          <div class="col-span-3">
+            <h2 class="mb-6 px-3 text-base font-semibold text-[#25221e]">
+              Ressources
+            </h2>
+            <ul class="text-gray-500 font-medium">
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Blog
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Questions
+                    fréquentes
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>
+                    Intégrations
+
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Devenir
+                    partenaire
+
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+
+            </ul>
+          </div>
+          <hr class="block lg:hidden my-8 h-[2px] bg-[#C3C3C3]" />
+          <div class="col-span-2">
+            <h2 class="mb-6 px-3 text-base font-semibold text-[#25221e]">
+              Entreprise
+
+
+            </h2>
+            <ul class="text-gray-500 font-medium">
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>
+                    À propos
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Fonctionnement
+
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+              <li class="">
+                <a href=""
+                  class="hover:bg-[#f5f5f5] px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] font-normal"><span>Emplois
+                  </span>
+                  <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 16 16" width="1em" height="1em">
+                      <path fill-rule="evenodd"
+                        d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></span></a>
+              </li>
+
+            </ul>
+          </div>
+          <hr class="block lg:hidden my-8 h-[2px] bg-[#C3C3C3]" />
+          <div class="col-span-1">
+            <ul class="flex flex-row lg:flex-col justify-around items-center gap-5">
+              <li>
+                <a href="#"
+                  class="text-2xl hover:bg-[#f5f5f5] px-3 py-2 rounded-lg flex items-center justify-between text-[#25221e]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="1em"
+                    height="1em" aria-hidden="true">
+                    <path
+                      d="M22.393 3.339a8.874 8.874 0 0 1-2.868 1.121A4.452 4.452 0 0 0 16.23 3c-2.49 0-4.512 2.072-4.512 4.628 0 .363.039.715.116 1.054-3.75-.193-7.076-2.034-9.304-4.837a4.711 4.711 0 0 0-.61 2.329c0 1.605.796 3.022 2.008 3.852a4.424 4.424 0 0 1-2.046-.577v.056c0 2.244 1.556 4.115 3.622 4.539a4.305 4.305 0 0 1-1.19.162c-.29 0-.574-.027-.849-.081.575 1.838 2.24 3.177 4.216 3.212A8.91 8.91 0 0 1 1 19.256a12.564 12.564 0 0 0 6.919 2.077c8.303 0 12.842-7.05 12.842-13.167 0-.202-.004-.403-.011-.6A9.269 9.269 0 0 0 23 5.17a8.84 8.84 0 0 1-2.592.729 4.621 4.621 0 0 0 1.985-2.56z">
+                    </path>
+                  </svg>
+                  <span class="sr-only"> Twitter page</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="text-2xl hover:bg-[#f5f5f5] px-3 py-2 rounded-lg flex items-center justify-between text-[#25221e]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="1em"
+                    height="1em" aria-hidden="true">
+                    <path
+                      d="M23 12.067C23 5.955 18.075 1 12 1S1 5.955 1 12.067C1 17.591 5.023 22.17 10.281 23v-7.734H7.488v-3.199h2.793V9.63c0-2.774 1.643-4.306 4.155-4.306 1.203 0 2.462.216 2.462.216v2.724h-1.387c-1.366 0-1.792.853-1.792 1.73v2.074h3.05l-.487 3.2h-2.563V23C18.977 22.17 23 17.591 23 12.067z">
+                    </path>
+                  </svg>
+                  <span class="sr-only">Facebook page</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="text-2xl hover:bg-[#f5f5f5] px-3 py-2 rounded-lg flex items-center justify-between text-[#25221e]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="1em"
+                    height="1em" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M6.608 12a5.392 5.392 0 1 1 10.784 0 5.392 5.392 0 0 1-10.784 0zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"
+                      clip-rule="evenodd"></path>
+                    <path d="M17.605 7.655a1.26 1.26 0 1 0 0-2.52 1.26 1.26 0 0 0 0 2.52z"></path>
+                    <path fill-rule="evenodd"
+                      d="M12 1.5c-2.852 0-3.21.012-4.33.063-1.117.051-1.88.229-2.548.488a5.146 5.146 0 0 0-1.86 1.211 5.146 5.146 0 0 0-1.21 1.86c-.26.668-.438 1.431-.489 2.549C1.513 8.79 1.5 9.148 1.5 12c0 2.852.012 3.21.063 4.33.051 1.117.229 1.88.488 2.548.269.69.628 1.276 1.211 1.86.584.583 1.17.942 1.86 1.21.668.26 1.431.438 2.549.489 1.12.05 1.477.063 4.329.063 2.852 0 3.21-.012 4.33-.063 1.117-.051 1.88-.229 2.548-.488a5.149 5.149 0 0 0 1.86-1.211 5.149 5.149 0 0 0 1.21-1.86c.26-.668.438-1.431.489-2.549.05-1.12.063-1.477.063-4.329 0-2.852-.012-3.21-.063-4.33-.051-1.117-.229-1.88-.488-2.548a5.148 5.148 0 0 0-1.211-1.86 5.147 5.147 0 0 0-1.86-1.21c-.668-.26-1.431-.438-2.549-.489C15.21 1.513 14.852 1.5 12 1.5zm0 1.892c2.804 0 3.136.01 4.243.061 1.024.047 1.58.218 1.95.362.49.19.84.418 1.207.785.367.368.595.717.785 1.207.144.37.315.926.362 1.95.05 1.107.061 1.44.061 4.243 0 2.804-.01 3.136-.061 4.243-.047 1.024-.218 1.58-.362 1.95-.19.49-.418.84-.785 1.207a3.254 3.254 0 0 1-1.207.785c-.37.144-.926.315-1.95.362-1.107.05-1.44.061-4.243.061-2.804 0-3.136-.01-4.243-.061-1.024-.047-1.58-.218-1.95-.362-.49-.19-.84-.418-1.207-.785a3.253 3.253 0 0 1-.785-1.207c-.144-.37-.315-.926-.362-1.95-.05-1.107-.061-1.44-.061-4.243 0-2.804.01-3.136.061-4.243.047-1.024.218-1.58.362-1.95.19-.49.418-.84.785-1.207a3.253 3.253 0 0 1 1.207-.785c.37-.144.926-.315 1.95-.362 1.107-.05 1.44-.061 4.243-.061z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="sr-only">Insta page</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center bg-[#f5f5f5] pt-3 pb-3">
+
+      <div class="container max-w-[1360px] mx-auto px-6  md:flex md:items-center md:justify-between items-center">
+        <span class="text-xs text-gray-500 md:text-center self-center">© 2024 <a href="index.php"
+            class="hover:underline">Formalist™</a>.
+          Tous droits réservés.</span>
+        <ul class="text-gray-400 font-medium flex flex-wrap items-center gap-x-1 lg:justify-end justify-center">
+          <li class="">
+            <a href=""
+              class="underline px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] text-xs"><span>Confidentialité</span>
+              <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 16 16" width="1em" height="1em">
+                  <path fill-rule="evenodd"
+                    d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                    clip-rule="evenodd"></path>
+                </svg></span></a>
+          </li>
+          <li>
+            |
+          </li>
+          <li class="">
+            <a href=""
+              class="underline px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] text-xs"><span>Sécurité</span>
+              <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 16 16" width="1em" height="1em">
+                  <path fill-rule="evenodd"
+                    d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                    clip-rule="evenodd"></path>
+                </svg></span></a>
+          </li>
+          <li>
+            |
+          </li>
+          <li class="">
+            <a href=""
+              class="underline px-3 py-2 rounded-lg  flex items-center justify-between text-[#25221e] text-xs"><span>CGU</span>
+              <span class="text-lg lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 16 16" width="1em" height="1em">
+                  <path fill-rule="evenodd"
+                    d="M6.47 3.47a.75.75 0 0 0 0 1.06L9.94 8l-3.47 3.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 0-1.06l-4-4a.75.75 0 0 0-1.06 0z"
+                    clip-rule="evenodd"></path>
+                </svg></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+  <script>
+    $('.wrapperSlider').slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      autoplaySpeed: 0, // Speed for each slide
+      speed: 3000, // Speed for linear transition
+      cssEase: 'linear', // Linear transition
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+          }
+        }
+      ]
+    });
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const button = document.getElementById("navButton");
+      const targetElement = document.getElementById("header");
+
+      button.addEventListener("click", () => {
+        targetElement.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>
